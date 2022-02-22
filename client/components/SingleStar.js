@@ -6,7 +6,7 @@ import { astrology } from "../signs";
 // Single Star styles
 const styles = {
   modal: {
-    paddingTop: "20%",
+    paddingTop: "10%",
   },
   starImage: {
     height: "12.5rem",
