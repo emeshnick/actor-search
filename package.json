@@ -22,6 +22,7 @@
     "history": "^5.0.1",
     "mocha": "^9.2.0",
     "morgan": "^1.10.0",
+    "newrelic": "^8.7.1",
     "nodemon": "^2.0.12",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0",
