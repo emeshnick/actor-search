@@ -1,4 +1,3 @@
-require("newrelic"); // New Relic APM
 const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
