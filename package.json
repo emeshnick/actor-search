@@ -23,6 +23,7 @@
     "mocha": "^9.2.0",
     "morgan": "^1.10.0",
     "newrelic": "^8.7.1",
+    "node-cache": "^5.1.2",
     "nodemon": "^2.0.12",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0",
