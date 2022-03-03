@@ -72,10 +72,11 @@ router.get("/person/birthday", async (req, res, next) => {
   }
 });
 
-router.get(
-  "/person",
-  cache.get,
-  async (req, res, next) => {
+router.get("/person", async (req, res, next) => {
+  const cached = cache.get(req);
+  if (cached) {
+    res.json(cached);
+  } else {
     try {
       const response = await axios.get(
         "https://api.themoviedb.org/3/person/" + req.query["starId"],
@@ -84,13 +85,13 @@ router.get(
         }
       );
 
+      cache.set(req, response.data);
       res.json(response.data);
     } catch (err) {
       next(err);
     }
-  },
-  cache.set
-);
+  }
+});
 
 router.use((req, res, next) => {
   const error = new Error("Not Found");
