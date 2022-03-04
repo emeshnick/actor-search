@@ -10,7 +10,13 @@ import singleStar from "./singleStar.js";
  */
 const reducer = combineReducers({ data, singleStar });
 const middleware = composeWithDevTools(
-  applyMiddleware(thunkMiddleware, createLogger({ collapsed: true }))
+  applyMiddleware(
+    thunkMiddleware,
+    createLogger({
+      collapsed: true,
+      predicate: process.env.NODE_ENV !== "production",
+    })
+  )
 );
 const store = createStore(reducer, middleware);
 
