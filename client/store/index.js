@@ -18,7 +18,6 @@ const middleware = composeWithDevTools(
     })
   )
 );
-console.log(process.env.NODE_ENV);
 const store = createStore(reducer, middleware);
 
 // Export store for use in React components
