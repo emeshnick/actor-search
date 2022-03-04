@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV='test' mocha tests/*.js --require @babel/polyfill --require @babel/register --exit",
-    "build-client": "webpack",
+    "build": "NODE_ENV='production' webpack",
     "build-client-watch": "webpack -w",
     "start": "node server",
     "start-dev": "NODE_ENV='development' npm run build-client-watch & NODE_ENV='development' npm run start-server",

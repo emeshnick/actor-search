@@ -2,7 +2,9 @@ const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
 const PORT = process.env.PORT || 8080;
-const app = express();
+const app = express({
+  dev: process.env.NODE_ENV !== "production",
+});
 
 // Use .env variables if not in production mode
 if (process.env.NODE_ENV !== "production") {
