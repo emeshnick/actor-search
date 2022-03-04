@@ -14,10 +14,11 @@ const middleware = composeWithDevTools(
     thunkMiddleware,
     createLogger({
       collapsed: true,
-      predicate: process.env.NODE_ENV !== "production",
+      predicate: () => process.env.NODE_ENV !== "production",
     })
   )
 );
+console.log(process.env.NODE_ENV);
 const store = createStore(reducer, middleware);
 
 // Export store for use in React components
