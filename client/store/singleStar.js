@@ -8,7 +8,7 @@ const SEARCH_STAR = "SEARCH_STAR";
 const GET_STAR = "GET_STAR";
 const CLEAR_STAR = "CLEAR_STAR";
 
-// Search for actor by name
+// Action creator to search for actor by name
 const searchedStar = (searchResults) => {
   return {
     type: SEARCH_STAR,

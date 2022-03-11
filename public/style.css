@@ -17,6 +17,41 @@ h2 {
   font-weight: 400;
 }
 
+.main-container {
+  padding-top: 4.5rem;
+  padding-bottom: 5rem;
+}
+
+.header {
+  padding-bottom: 0.5rem;
+}
+
+.subheading {
+  font-weight: lighter;
+}
+
+.loading {
+  margin-top: 3rem;
+}
+
+#signature {
+  margin-top: 2rem;
+  font-weight: lighter;
+}
+
+#footer {
+  height: 2.5rem;
+  background-color: #e9ecef;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-weight: lighter;
+}
+
+#footer-text {
+  padding-top: 0.5rem;
+}
+
 .figure:hover {
   background-color: #e9ecef;
 }

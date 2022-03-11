@@ -156,18 +156,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var styles = {
-  mainContainer: {
-    padding: "5rem"
-  },
-  header: {
-    paddingBottom: "0.5rem"
-  },
-  signature: {
-    marginTop: "2rem",
-    fontWeight: "lighter"
-  }
-};
 
 var About = /*#__PURE__*/function (_React$Component) {
   _inherits(About, _React$Component);
@@ -184,13 +172,13 @@ var About = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
-        style: styles.mainContainer
+        className: "main-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        style: styles.header
+        className: "header"
       }, "About Star Signs"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Star Signs leans into two of the guiltiest of guilty pleasures:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, " celebrity gossip and astrology."), " Add a dash of horoscope to your tabloids, or throw in a household name to your birth chart reading.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "This app uses the TMDB api to get information about actors. You can learn more about the api", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "https://developers.themoviedb.org/3"
       }, "here"), "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        style: styles.signature
+        id: "signature"
       }, "Created in 2022 by Elijah Meshnick"));
     }
   }]);
@@ -238,21 +226,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
- // Footer styles
 
-var styles = {
-  footer: {
-    height: "2.5rem",
-    backgroundColor: "#e9ecef",
-    width: "100%",
-    position: "absolute",
-    bottom: "0",
-    fontWeight: "lighter"
-  },
-  text: {
-    paddingTop: "0.5rem"
-  }
-};
 /*
  * Footer component includes link to repository
  */
@@ -272,10 +246,10 @@ var Footer = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        style: styles.footer
+        id: "footer"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "text-center",
-        style: styles.text
+        id: "footer-text"
       }, "Find this project's code on", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "https://github.com/emeshnick/actor-search"
       }, "Github"))));
@@ -342,23 +316,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
- // Styles for homepage
 
-var styles = {
-  header: {
-    marginBottom: "1.5rem"
-  },
-  subheading: {
-    fontWeight: "lighter"
-  },
-  mainContainer: {
-    paddingTop: "4rem",
-    paddingBottom: "5rem"
-  },
-  loading: {
-    marginTop: "3rem"
-  }
-};
 /*
  * Home component with search input
  * Displays current popular searches
@@ -502,13 +460,11 @@ var Home = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
-        id: "main-container",
-        style: styles.mainContainer,
-        className: "text-center"
+        className: "text-center main-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        style: styles.header
+        className: "header"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Star Signs"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-        style: styles.subheading
+        className: "subheading"
       }, "search for actors ", "&", " their zodiac")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], {
         onSubmit: this.search
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["InputGroup"], {
@@ -527,7 +483,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
       }, "Search"))), this.props.popularPeople && this.state.status === "waiting" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PopularStars__WEBPACK_IMPORTED_MODULE_4__["default"], {
         handleClick: this.handleClick
       }), this.state.status === "loading" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        style: styles.loading
+        className: "loading"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "visually-hidden"
       }, "Searching..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Spinner"], {
@@ -1692,7 +1648,6 @@ var middleware = Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_3__["c
     return "development" !== "production";
   }
 })));
-console.log("development");
 var store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(reducer, middleware); // Export store for use in React components
 
 /* harmony default export */ __webpack_exports__["default"] = (store);
@@ -1730,7 +1685,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var SEARCH_STAR = "SEARCH_STAR";
 var GET_STAR = "GET_STAR";
-var CLEAR_STAR = "CLEAR_STAR"; // Search for actor by name
+var CLEAR_STAR = "CLEAR_STAR"; // Action creator to search for actor by name
 
 var searchedStar = function searchedStar(searchResults) {
   return {

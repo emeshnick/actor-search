@@ -15,23 +15,6 @@ import { connect } from "react-redux";
 import { getPopular } from "../store/data";
 import { searchStar, getStar, clearStar } from "../store/singleStar";
 
-// Styles for homepage
-const styles = {
-  header: {
-    marginBottom: "1.5rem",
-  },
-  subheading: {
-    fontWeight: "lighter",
-  },
-  mainContainer: {
-    paddingTop: "4rem",
-    paddingBottom: "5rem",
-  },
-  loading: {
-    marginTop: "3rem",
-  },
-};
-
 /*
  * Home component with search input
  * Displays current popular searches
@@ -97,16 +80,10 @@ class Home extends React.Component {
 
   render() {
     return (
-      <Container
-        id="main-container"
-        style={styles.mainContainer}
-        className="text-center"
-      >
-        <div style={styles.header}>
+      <Container className="text-center main-container">
+        <div className="header">
           <h1>Star Signs</h1>
-          <h2 style={styles.subheading}>
-            search for actors {"&"} their zodiac
-          </h2>
+          <h2 className="subheading">search for actors {"&"} their zodiac</h2>
         </div>
         <Form onSubmit={this.search}>
           <InputGroup className="mb-3">
@@ -133,7 +110,7 @@ class Home extends React.Component {
         )}
 
         {this.state.status === "loading" && (
-          <div style={styles.loading}>
+          <div className="loading">
             <div className="visually-hidden">Searching...</div>
             <Spinner animation="grow" role="status" />
             <Spinner animation="grow" role="status" />
